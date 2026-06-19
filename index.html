@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 · 信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            font-weight: 350;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        /* 顶部导航 */
+        .top-bar {
+            padding: 1.8rem 0 1rem 0;
+            border-bottom: 1px solid #eae8e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .site-name {
+            font-size: 1.1rem;
+            letter-spacing: 0.06em;
+            font-weight: 430;
+            color: #2b2b2b;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #121212;
+            border-bottom-color: #a0988c;
+        }
+        /* hero 区域 */
+        .hero {
+            padding: 4.5rem 0 3rem 0;
+        }
+        .hero h1 {
+            font-weight: 380;
+            font-size: 2rem;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.2rem;
+            color: #1a1a1a;
+        }
+        .hero p {
+            color: #3f3f3f;
+            max-width: 580px;
+            font-size: 1rem;
+        }
+        .hero .intro-note {
+            margin-top: 1.8rem;
+            font-size: 0.9rem;
+            color: #6b6b6b;
+            border-left: 2px solid #d4cdc4;
+            padding-left: 1.2rem;
+        }
+        /* 场景模块 */
+        .scene-section {
+            padding: 2.8rem 0 1.2rem 0;
+        }
+        .section-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #8e8a84;
+            margin-bottom: 1.8rem;
+        }
+        .three-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+        .scene-item {
+            border-bottom: 1px solid #ece8e3;
+            padding-bottom: 2rem;
+        }
+        .scene-item h3 {
+            font-weight: 410;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #252525;
+        }
+        .scene-item p {
+            font-size: 0.95rem;
+            color: #464646;
+        }
+        .scene-item .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: #eae7e2;
+            padding: 0.2rem 0.8rem;
+            border-radius: 2rem;
+            color: #3d3d3d;
+            margin-top: 0.6rem;
+            letter-spacing: 0.02em;
+        }
+        /* 常见说明 (faq) */
+        .faq-section {
+            padding: 2.5rem 0 3rem 0;
+        }
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #efece8;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 420;
+            font-size: 1rem;
+            color: #1f1f1f;
+            margin-bottom: 0.25rem;
+        }
+        .faq-a {
+            font-size: 0.9rem;
+            color: #555;
+            max-width: 580px;
+        }
+        /* 底部 */
+        .footer-note {
+            border-top: 1px solid #e7e4df;
+            padding: 2.5rem 0 3.5rem 0;
+            font-size: 0.8rem;
+            color: #7d7a74;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.6rem;
+        }
+        .footer-note a {
+            color: #3f3f3f;
+            text-decoration: underline 0.5px from-font;
+            text-underline-offset: 3px;
+        }
+        .footer-note a:hover {
+            color: #0f0f0f;
+        }
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+            .nav-links {
+                gap: 1.2rem;
+            }
+            .container {
+                padding: 0 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <header class="top-bar">
+            <span class="site-name">索引·雷速</span>
+            <nav class="nav-links">
+                <a href="#">整理</a>
+                <a href="#">条目</a>
+                <a href="#">归档</a>
+            </nav>
+        </header>
+
+        <!-- hero 与核心介绍 -->
+        <section class="hero">
+            <h1>资料整理与信息索引</h1>
+            <p>
+                日常中我们经常面对分散的片段——项目记录、参考链接、备忘与草稿。 
+                把这些内容汇集于一处，并按自己的方式组织，比想象中更必要。 
+                <a href="https://ssl-main-leisu.com" style="color: #121212; text-decoration: underline 0.5px from-font; text-underline-offset: 2px;">雷速</a> 
+                正是从这类需求出发：它不是一个格式化模板，而是一种灵活的索引结构，适合存放那些值得回溯但尚未成文的资料。
+            </p>
+            <div class="intro-note">
+                信息管理的方法因人而异，但「可查找、可归类、可复述」始终是基础。
+            </div>
+        </section>
+
+        <!-- 三个场景模块 -->
+        <section class="scene-section">
+            <div class="section-label">常见使用场景</div>
+            <div class="three-grid">
+                <div class="scene-item">
+                    <h3>项目碎片收录</h3>
+                    <p>一个功能或产品往往涉及多条链路：文档、截图、代码片段、讨论记录。把这些零散条目放到同一索引下，后续检索时可以快速定位，而不必在文件夹与聊天记录之间来回翻找。</p>
+                    <span class="tag">整理习惯</span>
+                </div>
+                <div class="scene-item">
+                    <h3>阅读与笔记衔接</h3>
+                    <p>读到一篇长文、一份报告或一组数据，标记关键段落并写下简短的批注。之后当需要重新引用或对比时，索引页面会优先呈现你当时提炼的要点，而非全文重读。</p>
+                    <span class="tag">信息提取</span>
+                </div>
+                <div class="scene-item">
+                    <h3>个人知识卡片</h3>
+                    <p>不限于工作，也可以是兴趣领域：食谱改良记录、旅行地点的实用备忘、展览的观后整理。每一张卡片都很轻，但累积起来就构成属于你自己的小型参考系统。</p>
+                    <span class="tag">轻量归档</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见说明 (FAQ 摘要) -->
+        <section class="faq-section">
+            <div class="section-label">常见说明</div>
+            <div class="faq-item">
+                <div class="faq-q">索引与原始资料的关系？</div>
+                <div class="faq-a">索引指向资料的位置或摘要，并不强制存储原件。你可以把链接、本地路径或简短描述放在这里，原件依然保留在原来的地方。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">结构应该多细致？</div>
+                <div class="faq-a">依内容量而定。三五条笔记可以平铺，超过二十条建议按主题或日期分组。过度分类反而会增加维护负担，保持自然即可。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">是否适合团队共享？</div>
+                <div class="faq-a">主要为个人或小范围协作设计。如果需要多人实时编辑，可以考虑搭配版本控制或同步工具，但核心依然是条目清晰。</div>
+            </div>
+        </section>
+
+        <!-- 底部 -->
+        <footer class="footer-note">
+            <span>本次索引方向 · 轻量导航</span>
+            <span>
+                更多关于 <a href="https://ssl-main-leisu.com">雷速</a> 的整理思路
+            </span>
+        </footer>
+    </div>
+</body>
+</html>
